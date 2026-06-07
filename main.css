@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.main-tab {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+}
+
+.tabs-section {
+    margin: 40px 20px 0;
+    padding: 20px 30px 30px;
+    border:1px solid black;
+    border-radius: 10px;
+    width: min(80%,70rem);
+}
+
+.tab-menu {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    width: fit-content;
+}
+
+ .tab-menu a {
+    color: gray;
+}
+
+.span {
+    width:60px;
+    position: absolute;
+    height: 1px;
+    background-color: rgb(35, 34, 34);
+    transition: all .3s ease-in-out;
+    left:0px;
+    bottom:-2px;
+    transform: translateX(0);
+    pointer-events: none;
+}
+
+.container-cont {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(23, 23, 23);
+    color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs-content{
+    display: none;
+}
+
+.tab-menu li:nth-child(2):hover ~ .span{
+   transform: translateX(100px);
+   width: 70px;
+}
+
+.tab-menu li:nth-child(3):hover ~ .span{
+   transform: translateX(208px);
+   width: 70px;
+}
+
+.tab-menu li:nth-child(4):hover ~ .span{
+   transform: translateX(312px);
+   width: 70px;
+}
+
+.nav.show-content{
+    color: rgb(4, 4, 4);
+}
+
+.tabs-content.show-content {
+    display:inline-flex;
+}
+
+@media screen and (max-width:700px) {
+    
+.tabs-section {
+    margin: 40px 20px 0;
+    padding: 20px 30px 30px;
+    border:1px solid black;
+    border-radius: 10px;
+    width: min(80%,70rem);
+}
+
+}
+
+@media screen and (max-width:425px) {
+
+    .tabs-section {
+        padding: 15px;
+    width: min(95%,70rem);
+
+    }
+
+    .nav{
+        font-size: 14px;
+    }
+
+.tab-menu {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.container-cont {
+    height: 120px;
+}
+
+.tabs-content {
+    font-size: 14px;
+}
+
+.tab-menu li:first-child:hover ~ .span {
+    width: 50px;
+}
+
+.tab-menu li:nth-child(2):hover ~ .span{
+   transform: translateX(70px);
+   width: 65px;
+}
+
+.tab-menu li:nth-child(3):hover ~ .span{
+   transform: translateX(160px);
+   width: 50px;
+}
+
+.tab-menu li:nth-child(4):hover ~ .span{
+   transform: translateX(230px);
+   width: 60px;
+}
+
+}
